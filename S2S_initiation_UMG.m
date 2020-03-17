@@ -68,7 +68,7 @@ for g=1:numel(groups)
         end
     end
     
-    %monkeypsych_clean_data(main_path,[min(unique([dates_per_subject{:}])) max(unique([dates_per_subject{:}]))]);
+    %MPA_clean_data(main_path,[min(unique([dates_per_subject{:}])) max(unique([dates_per_subject{:}]))]);
     for t=1:numel(types)
         type=types{t};
         clear M2S_output

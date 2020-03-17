@@ -259,17 +259,17 @@ for trial_idx=1:numel(insp) % Looping through every trial again!
 end
 
 %% Exploration Pie chart calculation
-[revealed_tar_pos.selected,revealed_tar_pos.nonnan]=get_revealed_target_positions(revealed_target_positions_in_order,revealed_targets_in_order,allpos,possible_positions,all_n_positions,Disp.plot_only_LR);
+[revealed_tar_pos.selected,revealed_tar_pos.nonnan]=DAG_get_revealed_target_positions(revealed_target_positions_in_order,revealed_targets_in_order,allpos,possible_positions,all_n_positions,Disp.plot_only_LR);
 
 %if Disp.plot_only_LR==0
 %     [revealed_tar_pos.more_right,revealed_tar_pos.more_right_nonnan]=...
-%         get_revealed_target_positions(revealed_target_positions_in_order,revealed_targets_in_order,allpos,possible_positions,all_n_positions,false);
+%         DAG_get_revealed_target_positions(revealed_target_positions_in_order,revealed_targets_in_order,allpos,possible_positions,all_n_positions,false);
 %
 %     revealed_tar_pos_LR.more_right              =revealed_tar_pos.more_right;
 %     revealed_tar_pos_LR.more_right_nonnan       =revealed_tar_pos.more_right_nonnan;
 
 %     [revealed_tar_pos.more_left,revealed_tar_pos.more_left_nonnan]=...
-%         get_revealed_target_positions(revealed_target_positions_in_order,revealed_targets_in_order,allpos,possible_positions,all_n_positions,false);
+%         DAG_get_revealed_target_positions(revealed_target_positions_in_order,revealed_targets_in_order,allpos,possible_positions,all_n_positions,false);
 
 %     revealed_tar_pos_LR.more_left               =revealed_tar_pos.more_left;
 %     revealed_tar_pos_LR.more_left_nonnan        =revealed_tar_pos.more_left_nonnan ;
@@ -281,9 +281,9 @@ end
 %     revealed_tar_pos_LR.more_left               =NaN;
 %     revealed_tar_pos_LR.more_left_nonnan        =NaN;
 %     [revealed_tar_pos.more_left,revealed_tar_pos.more_left_nonnan]=...
-%         get_revealed_target_positions(revealed_target_positions_in_order,revealed_targets_in_order,allpos,possible_positions,all_n_positions,true);
+%         DAG_get_revealed_target_positions(revealed_target_positions_in_order,revealed_targets_in_order,allpos,possible_positions,all_n_positions,true);
 %       [revealed_tar_pos.more_right,revealed_tar_pos.more_right_nonnan]=...
-%         get_revealed_target_positions(revealed_target_positions_in_order(more_targets_right,:),revealed_targets_in_order(more_targets_right,:),allpos(:,more_targets_right),possible_positions,all_n_positions,1);
+%         DAG_get_revealed_target_positions(revealed_target_positions_in_order(more_targets_right,:),revealed_targets_in_order(more_targets_right,:),allpos(:,more_targets_right),possible_positions,all_n_positions,1);
 %
 % end
 
